@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserView, MobileView } from 'react-device-detect';
+import styled from 'styled-components';
 
+import { PostView } from './containers/PostView';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Wrapper>
+			<MobileView>
+				mobile
+				<PostView />
+			</MobileView>
+			<BrowserView>
+				browser
+				<PostView />
+			</BrowserView>
+		</Wrapper>
+	);
 }
 
 export default App;
+
+const Wrapper = styled.div``;
