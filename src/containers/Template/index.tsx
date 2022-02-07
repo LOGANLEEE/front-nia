@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { Wrapper } from './Wrapper';
 
-interface Props {}
-
-export const Template = ({}: Props) => {
-	return <Wrapper>Template</Wrapper>;
+interface Props {
+	className?: string;
+}
+export const Template = ({ className }: Props) => {
+	return <Wrapper className={className}>Template</Wrapper>;
 };
