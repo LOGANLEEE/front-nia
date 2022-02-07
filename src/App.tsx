@@ -1,23 +1,25 @@
 import React from 'react';
 import { BrowserView, MobileView } from 'react-device-detect';
-import styled from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
-import { PostView } from './containers/PostView';
+import { BrowserContainer } from './containers/BrowserContainer';
+import { MobileCotainer } from './containers/MobileCotainer';
+
 function App() {
+	const theme = {
+		isDarkMode: false,
+	};
+
 	return (
-		<Wrapper>
+		<ThemeProvider theme={theme}>
 			<MobileView>
-				mobile
-				<PostView />
+				<MobileCotainer />
 			</MobileView>
 			<BrowserView>
-				browser
-				<PostView />
+				<BrowserContainer />
 			</BrowserView>
-		</Wrapper>
+		</ThemeProvider>
 	);
 }
 
 export default App;
-
-const Wrapper = styled.div``;
