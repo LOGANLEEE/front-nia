@@ -8,7 +8,7 @@ import { MobileCotainer } from './containers/MobileCotainer';
 
 function App() {
 	const theme = {
-		isDarkMode: false,
+		dark: { bg: 'black', fg: 'white' },
 	};
 
 	const DebugObserver = () => {
