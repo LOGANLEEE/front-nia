@@ -23,7 +23,7 @@ export const PostView = ({ className }: Props) => {
 			{post.state === 'hasValue' && (
 				<ul>
 					{post.contents.map(({ author, from, hit, link, title, content, id, isnew, upload_date }: PostType) => (
-						<li key={id} onClick={() => window.open(link, title)}>
+						<li className='list' key={id} onClick={() => window.open(link, title)}>
 							{author}
 							{from}
 							{content}
