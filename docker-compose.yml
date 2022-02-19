@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+    front-nia:
+        image: loganlee/front-nia
+        restart: always
+        ports:
+            - 80:80
+        container_name: front
+        stdin_open: true
+        tty: true
+        build:
+            context: .
+            dockerfile: local.dockerfile
+        environment:
+            - CHOKIDAR_USEPOLLING=true
