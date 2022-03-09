@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+
+**/dummy.jsonc
+**/dummy1.jsonc
+**/dummy2.jsonc
+**/dummy3.jsonc
