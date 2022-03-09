@@ -1,3 +1,4 @@
+import { PostView } from 'components/PostView';
 import React from 'react';
 
 import { Wrapper } from './Wrapper';
@@ -7,5 +8,9 @@ interface Props {
 }
 
 export const BrowserContainer = ({ className }: Props) => {
-	return <Wrapper className={className}>BrowserContainer</Wrapper>;
+	return (
+		<Wrapper className={className}>
+			<PostView />
+		</Wrapper>
+	);
 };
